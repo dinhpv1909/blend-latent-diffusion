@@ -365,7 +365,7 @@ class ImageEditor:
             else torch.device("cpu")
         )
         self.model = load_model_from_config(
-            config=config, ckpt="models/ldm/text2img-large/model.ckpt", device=self.device
+            config=config, ckpt="/kaggle/working/models/ldm/text2img-large/model.ckpt", device=self.device
         )
         self.sampler = DDIMSampler(self.model)
 
